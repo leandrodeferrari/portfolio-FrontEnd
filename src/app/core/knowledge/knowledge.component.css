@@ -1,0 +1,42 @@
+.knowledge-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.knowledge-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #090909;
+  box-shadow: 0 0 0 10px #fff;
+}
+
+.knowledge-box .knowledge-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.knowledge-box .ico-circle {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.knowledge-box .ico-circle i {
+  line-height: 0;
+  font-size: 40px;
+}
+
+.knowledge-box .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.knowledge-box .s-description {
+  color: #4e4e4e;
+}
