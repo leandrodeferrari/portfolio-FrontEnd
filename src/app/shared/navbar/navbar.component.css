@@ -1,3 +1,7 @@
 .bg-dark {
   transition: all 1s ease;
 }
+
+@media (max-width:991.98px) {
+  nav { background-color: #0c0c0ce6 };
+}
