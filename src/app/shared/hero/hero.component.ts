@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Banner } from 'src/app/data/models/banner';
+import { PersonService } from 'src/app/data/services/person.service';
 import Typed from 'typed.js';
 
 @Component({
@@ -8,9 +10,15 @@ import Typed from 'typed.js';
 })
 export class HeroComponent implements OnInit {
 
-  constructor() { }
+  banner!: Banner;
+
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
+    this.personService.getBanner().subscribe(data => {
+      this.banner = data;
+    });
+
     const options = {
       strings: ['Java Developer'],
       typeSpeed: 90,

@@ -3,12 +3,12 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="box-shadow-full">
-          <div class="row">
+          <div *ngIf="about" class="row">
             <div class="col-md-6">
               <div class="row d-flex text-center">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/dwirzebm8/image/upload/v1671724862/portfolio/foto-de-perfil_sx6idg.jpg"
+                    src= '{{about.profilePhotoUrl}}'
                     class="img-fluid rounded b-shadow-a" alt="" width="300px">
                 </div>
               </div>
@@ -21,12 +21,11 @@
                   </h5>
                 </div>
                 <div class="about-info font-secondary">
-                  <p class="mb-1"><span class="title-s">Nombre: </span> <span>Leandro Deferrari</span></p>
-                  <p><span class="title-s">Perfil: </span> <span>Java Developer</span></p>
+                  <p class="mb-1"><span class="title-s">Nombre: </span> <span>{{about.fullName}}</span></p>
+                  <p><span class="title-s">Perfil: </span> <span>{{about.title}}</span></p>
                 </div>
                 <p class="font-secondary">
-                  Queriendo conseguir mi primer empleo IT, en donde pueda ampliar mis conocimientos, formar parte de un
-                  equipo de trabajo y aportar valor a la empresa.
+                  {{about.aboutMe}}
                 </p>
               </div>
             </div>
