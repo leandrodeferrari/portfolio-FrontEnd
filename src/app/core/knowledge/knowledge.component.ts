@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TechnologyService } from 'src/app/data/services/technology.service';
+import { Technology } from './../../data/models/technology';
 
 @Component({
   selector: 'app-knowledge',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KnowledgeComponent implements OnInit {
 
-  constructor() { }
+  technologies!: Technology[];
+
+  constructor(private techService: TechnologyService) { }
 
   ngOnInit(): void {
+    this.techService.getAll().subscribe(data => {
+      this.technologies = data;
+    });
   }
 
 }
