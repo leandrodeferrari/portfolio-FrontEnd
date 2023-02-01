@@ -10,7 +10,7 @@ import Typed from 'typed.js';
 })
 export class HeroComponent implements OnInit {
 
-  banner!: Banner;
+  banner?: Banner;
 
   constructor(private personService: PersonService) { }
 
