@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TechnologyService {
 
-  private urlAPI: string = 'http://localhost:8080/technologies';
+  private urlAPI: string = 'https://portfolio-backend-5f50.onrender.com/technologies';
 
   constructor(private http: HttpClient) { }
 

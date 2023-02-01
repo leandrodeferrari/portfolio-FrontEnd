@@ -10,7 +10,7 @@ import { Banner } from '../models/banner';
 })
 export class PersonService {
 
-  private urlAPI: string = 'http://localhost:8080/persons';
+  private urlAPI: string = 'https://portfolio-backend-5f50.onrender.com/persons';
 
   constructor(private http: HttpClient) { }
 
