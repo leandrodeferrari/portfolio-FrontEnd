@@ -1,9 +1,9 @@
-<div class="resume-item mb-3">
-  <h4>FullStack Developer</h4>
-  <h5>11/2021 - 09/2022</h5>
+<div *ngIf="course" class="resume-item mb-3">
+  <h4>{{course.title}}</h4>
+  <h5>{{course.startDate}} - {{course.endDate}}</h5>
   <p><em>Egg Educación, Ciudad de Mendoza - Mendoza -
       Argentina.</em></p>
-  <a href="https://drive.google.com/file/d/1jkKNvYbJd-Ag2m1hr89DyQNYWGa3BPzE/view?usp=sharing" target="_blank">
+  <a href='{{course.certificateUrl}}' target="_blank">
     <button class="btn btn-dark btn-sm" type="button">
       Ver Certificado
     </button>
