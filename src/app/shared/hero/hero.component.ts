@@ -19,6 +19,7 @@ export class HeroComponent implements OnInit {
       this.banner = data;
     });
 
+    /*
     const options = {
       strings: ['Java Developer'],
       typeSpeed: 90,
@@ -29,6 +30,7 @@ export class HeroComponent implements OnInit {
     };
 
     const typed: Typed = new Typed('.typed-element', options);
+    */
   }
 
 }

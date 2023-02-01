@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Work } from 'src/app/data/models/work';
+import { WorkService } from 'src/app/data/services/work.service';
 
 @Component({
   selector: 'app-works',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorksComponent implements OnInit {
 
-  constructor() { }
+  works!: Work[];
+
+  constructor(private workService: WorkService) { }
 
   ngOnInit(): void {
+    this.workService.getAll().subscribe(data => {
+      this.works = data;
+    });
   }
 
 }
