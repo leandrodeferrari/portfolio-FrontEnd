@@ -8,7 +8,7 @@ import { Work } from 'src/app/data/models/work';
 })
 export class WorkComponent implements OnInit {
 
-  @Input('works') work?: Work;
+  @Input('work') work?: Work;
 
   constructor() { }
 
