@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Career } from 'src/app/data/models/career';
+import { CareerService } from 'src/app/data/services/career.service';
 
 @Component({
   selector: 'app-careers',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CareersComponent implements OnInit {
 
-  constructor() { }
+  careers!: Career[];
+
+  constructor(private careerService: CareerService) { }
 
   ngOnInit(): void {
+    this.careerService.getAll().subscribe(data => {
+      this.careers = data;
+    });
   }
 
 }
