@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ContactComponent } from './contact/contact.component';
     NavbarComponent,
     HeroComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     HeroComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    LoadingComponent
   ]
 })
 export class SharedModule { }
