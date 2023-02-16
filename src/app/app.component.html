@@ -1,20 +1,24 @@
-<app-header></app-header>
-<app-hero></app-hero>
+<div *ngIf="!load">
+  <app-loading></app-loading>
+</div>
 
-<main id="main">
-  <app-about-me></app-about-me>
+<div *ngIf="load">
+  <app-header></app-header>
+  <app-hero></app-hero>
 
-  <app-studies></app-studies>
+  <main id="main">
+    <app-about-me></app-about-me>
 
-  <hr />
+    <app-studies></app-studies>
 
-  <app-experiences></app-experiences>
+    <hr />
 
-  <app-knowledge></app-knowledge>
+    <app-experiences></app-experiences>
 
-  <app-contact></app-contact>
-</main>
+    <app-knowledge></app-knowledge>
 
-<app-footer></app-footer>
+    <app-contact></app-contact>
+  </main>
 
-<router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
