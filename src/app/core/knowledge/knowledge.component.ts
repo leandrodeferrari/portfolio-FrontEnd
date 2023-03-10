@@ -9,7 +9,7 @@ import { Technology } from './../../data/models/technology';
 })
 export class KnowledgeComponent implements OnInit {
 
-  technologies!: Technology[];
+  technologies?: Technology[];
 
   constructor(private techService: TechnologyService) { }
 

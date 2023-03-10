@@ -9,7 +9,7 @@ import { WorkService } from 'src/app/data/services/work.service';
 })
 export class WorksComponent implements OnInit {
 
-  works!: Work[];
+  works?: Work[];
 
   constructor(private workService: WorkService) { }
 

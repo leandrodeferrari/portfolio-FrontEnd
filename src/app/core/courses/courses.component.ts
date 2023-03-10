@@ -9,7 +9,7 @@ import { CourseService } from './../../data/services/course.service';
 })
 export class CoursesComponent implements OnInit {
 
-  courses!: Course[];
+  courses?: Course[];
 
   constructor(private courseService: CourseService) { }
 

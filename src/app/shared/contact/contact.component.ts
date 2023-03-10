@@ -9,7 +9,7 @@ import { PersonService } from 'src/app/data/services/person.service';
 })
 export class ContactComponent implements OnInit {
 
-  contact!: Contact;
+  contact?: Contact;
 
   constructor(private personService: PersonService) { }
 

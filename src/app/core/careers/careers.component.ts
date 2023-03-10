@@ -9,7 +9,7 @@ import { CareerService } from 'src/app/data/services/career.service';
 })
 export class CareersComponent implements OnInit {
 
-  careers!: Career[];
+  careers?: Career[];
 
   constructor(private careerService: CareerService) { }
 

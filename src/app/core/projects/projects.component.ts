@@ -9,7 +9,7 @@ import { ProjectService } from 'src/app/data/services/project.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects!: Project[];
+  projects?: Project[];
 
   constructor(private projectService: ProjectService) { }
 

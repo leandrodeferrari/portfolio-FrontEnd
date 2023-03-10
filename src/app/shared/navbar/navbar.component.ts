@@ -8,6 +8,8 @@ import { HostListener } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  isLogged: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -21,6 +23,14 @@ export class NavbarComponent implements OnInit {
     } else {
       element.classList.remove('bg-dark');
     }
+  }
+
+  login(){
+    this.isLogged = true;
+  }
+
+  logout(){
+    this.isLogged = false;
   }
 
 }
