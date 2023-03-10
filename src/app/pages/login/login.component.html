@@ -1,9 +1,39 @@
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="modal fade" id="modal-login" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title font-primary font-bold h3">
+          Login
+      </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container col-10">
+          <form action="" method="post">
+            <div class="container font-secondary">
+              <div class="row">
+                <div class="col-12">
+                  <input type="text" class="form-control" id="userNameOrEmail"
+                    placeholder="Email/Nombre de usuario" name="userNameOrEmail" autofocus required/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-2 mt-2">
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña"
+                      name="password" required />
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid gap-2 mt-2">
+                <input class="btn btn-dark mb-2" type="submit" value="Iniciar Sesión">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
   </div>
 </div>

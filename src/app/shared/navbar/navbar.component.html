@@ -43,7 +43,7 @@
           <a class="nav-link" href="#contact">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="login()" *ngIf="!isLogged">Ingresar</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-login" (click)="login()" *ngIf="!isLogged">Ingresar</a>
           <a class="nav-link" href="#" (click)="logout()" *ngIf="isLogged">Salir</a>
         </li>
       </ul>

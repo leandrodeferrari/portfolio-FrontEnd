@@ -17,9 +17,11 @@ export class LoginComponent implements OnInit {
   }
 
   signIn(){
-    this.loginService.login(this.login).subscribe(data => {
-      console.log(data);
-    });
+    if(this.login != null){
+      this.loginService.login(this.login).subscribe(data => {
+        console.log(data);
+      });
+    }
   }
 
 }
