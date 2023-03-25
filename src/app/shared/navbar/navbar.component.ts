@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { AuthService } from 'src/app/data/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +11,10 @@ export class NavbarComponent implements OnInit {
 
   isLogged: boolean = false;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.isLogged = this.authService.isAuthenticated();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -26,10 +28,14 @@ export class NavbarComponent implements OnInit {
   }
 
   login(){
-    this.isLogged = true;
+    let isAuthenticated = this.authService.isAuthenticated();
+    if(isAuthenticated){
+      this.isLogged = true;
+    }
   }
 
   logout(){
+    this.authService.logout();
     this.isLogged = false;
   }
 

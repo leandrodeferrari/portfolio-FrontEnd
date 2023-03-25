@@ -7,6 +7,11 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
+import { JwtModule } from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return localStorage.getItem("jwt-token");
+}
 
 @NgModule({
   declarations: [
@@ -18,7 +23,13 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    PagesModule
+    PagesModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["https://portfolio-backend-5f50.onrender.com"]
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

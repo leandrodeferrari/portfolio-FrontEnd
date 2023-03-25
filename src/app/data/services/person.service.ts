@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Contact } from '../models/contact';
 import { About } from '../models/about';
 import { Banner } from '../models/banner';
+import { Email } from '../models/email';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class PersonService {
 
   getAbout(): Observable<About>{
     return this.http.get<About>(this.urlAPI + "/about");
+  }
+
+  sendEmail(email: Email){
+    return this.http.post<Map<string, string>>(this.urlAPI + "/contact", email);
   }
 
 }
