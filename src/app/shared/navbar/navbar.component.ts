@@ -39,4 +39,8 @@ export class NavbarComponent implements OnInit {
     this.isLogged = false;
   }
 
+  isAuth(): boolean {
+    return this.authService.isAuthenticated();
+  }
+
 }

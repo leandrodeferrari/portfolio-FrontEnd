@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { LoginRequest } from 'src/app/data/models/login-request';
 import { AuthService } from 'src/app/data/services/auth.service';
 
@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/data/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  @ViewChild('modalClose') modalClose: ElementRef | undefined;
+
   credentials: LoginRequest = { userNameOrEmail: '', password: '' };
 
   constructor(private authService: AuthService) { }
@@ -18,6 +20,13 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.authService.login(this.credentials).subscribe();
+    this.cerrarModal();
+  }
+
+  cerrarModal(){
+    if(this.modalClose){
+      this.modalClose.nativeElement.click();
+    }
   }
 
 }

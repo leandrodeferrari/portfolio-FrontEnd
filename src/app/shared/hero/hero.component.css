@@ -82,3 +82,21 @@
 .hero-single .breadcrumb a {
   color: #fff;
 }
+
+.pencil-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+}
+
+.trashcan-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
