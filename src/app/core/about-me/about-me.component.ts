@@ -24,4 +24,8 @@ export class AboutMeComponent implements OnInit {
     return this.authService.isAuthenticated();
   }
 
+  deleteAbout(){
+    this.personService.deleteAbout();
+  }
+
 }

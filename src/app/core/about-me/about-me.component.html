@@ -30,8 +30,8 @@
               </div>
             </div>
           </div>
-          <button *ngIf="isAuth()" class="pencil-image"><i class="bi bi-pen-fill"></i></button>
-          <button *ngIf="isAuth()" class="trashcan-image"><i class="bi bi-trash-fill"></i></button>
+          <button *ngIf="isAuth()" class="pencil-image" data-bs-toggle="modal" data-bs-target="#modal-edit-about"><i class="bi bi-pen-fill"></i></button>
+          <button *ngIf="isAuth()" class="trashcan-image" (click)="deleteAbout()"><i class="bi bi-trash-fill"></i></button>
         </div>
       </div>
     </div>

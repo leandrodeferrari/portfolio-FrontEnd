@@ -1,0 +1,23 @@
+<div class="modal fade" id="modal-delete-banner" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title font-primary font-bold h3">
+          Editar Banner
+      </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #modalDeleteBanner>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container col-10">
+          <p>¿Seguro que quiere borrar el banner?</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-dark" type="button" (click)="onSubmit()">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
