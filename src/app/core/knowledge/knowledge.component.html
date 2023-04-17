@@ -20,6 +20,11 @@
           <div class="knowledge-content">
             <h2 class="s-title font-secondary">{{technology.name}}</h2>
           </div>
+          <div *ngIf="isAuth()" class="crud-icons">
+            <button class="pencil-image"><i class="bi bi-pen-fill"></i></button>
+            <button class="trashcan-image"><i class="bi bi-trash-fill"></i></button>
+            <button class="add-image"><i class="bi bi-file-plus-fill"></i></button>
+          </div>
         </div>
       </div>
     </div>

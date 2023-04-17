@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from 'src/app/data/models/course';
+import { AuthService } from 'src/app/data/services/auth.service';
 
 @Component({
   selector: 'app-course',
@@ -10,9 +11,13 @@ export class CourseComponent implements OnInit {
 
   @Input('course') course?: Course;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  isAuth(): boolean{
+    return this.authService.isAuthenticated();
   }
 
 }

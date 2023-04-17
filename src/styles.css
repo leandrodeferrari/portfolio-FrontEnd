@@ -23,6 +23,33 @@
   font-weight: bold;
 }
 
+.pencil-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+}
+
+.trashcan-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.add-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 80px;
+}
+
 body {
   background-color: #f5f5f5;
   color: #4e4e4e;

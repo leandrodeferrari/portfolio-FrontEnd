@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { About } from 'src/app/data/models/about';
+import { AuthService } from 'src/app/data/services/auth.service';
 import { PersonService } from 'src/app/data/services/person.service';
 
 @Component({
@@ -11,12 +12,16 @@ export class AboutMeComponent implements OnInit {
 
   about?: About;
 
-  constructor(private personService: PersonService) { }
+  constructor(private personService: PersonService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.personService.getAbout().subscribe(data => {
       this.about = data;
     });
+  }
+
+  isAuth(): boolean{
+    return this.authService.isAuthenticated();
   }
 
 }

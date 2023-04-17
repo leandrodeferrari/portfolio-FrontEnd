@@ -10,4 +10,9 @@
       Ver Plan de Estudio
     </button>
   </a>
+  <div *ngIf="isAuth()">
+    <button class="pencil-image"><i class="bi bi-pen-fill"></i></button>
+    <button class="trashcan-image"><i class="bi bi-trash-fill"></i></button>
+    <button class="add-image"><i class="bi bi-file-plus-fill"></i></button>
+  </div>
 </div>

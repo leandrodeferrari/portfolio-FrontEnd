@@ -40,3 +40,22 @@
 .knowledge-box .s-description {
   color: #4e4e4e;
 }
+
+.pencil-image {
+  position: relative;
+  margin-right: 0px;
+}
+
+.trashcan-image {
+  position: relative;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.add-image {
+  position: relative;
+}
+
+.crud-icons {
+  position: absolute;
+}

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Project } from 'src/app/data/models/project';
+import { AuthService } from 'src/app/data/services/auth.service';
 
 @Component({
   selector: 'app-project',
@@ -10,9 +11,13 @@ export class ProjectComponent implements OnInit {
 
   @Input('project') project?: Project;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  isAuth(): boolean{
+    return this.authService.isAuthenticated();
   }
 
 }
