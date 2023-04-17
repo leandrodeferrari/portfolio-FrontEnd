@@ -24,4 +24,10 @@ export class KnowledgeComponent implements OnInit {
     return this.authService.isAuthenticated();
   }
 
+  delete(id: number){
+    if(id){
+      this.techService.delete(id);
+    }
+  }
+
 }

@@ -5,13 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { EditBannerComponent } from './edit-banner/edit-banner.component';
 import { DeleteBannerComponent } from './delete-banner/delete-banner.component';
 import { EditAboutComponent } from './edit-about/edit-about.component';
+import { EditTechnologyComponent } from './edit-technology/edit-technology.component';
+import { CreateTechnologyComponent } from './create-technology/create-technology.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     EditBannerComponent,
     DeleteBannerComponent,
-    EditAboutComponent
+    EditAboutComponent,
+    EditTechnologyComponent,
+    CreateTechnologyComponent
   ],
   imports: [
   CommonModule,
@@ -21,7 +25,9 @@ import { EditAboutComponent } from './edit-about/edit-about.component';
     LoginComponent,
     EditBannerComponent,
     DeleteBannerComponent,
-    EditAboutComponent
+    EditAboutComponent,
+    CreateTechnologyComponent,
+    EditTechnologyComponent
   ]
 })
 export class PagesModule { }
